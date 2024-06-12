@@ -1,12 +1,10 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
 import {
   DiJavascript1,
   DiReact,
   DiNodejs,
   DiPython,
-  DiGit,
   DiJava,
   DiBootstrap,
   DiCss3,
@@ -17,7 +15,9 @@ import {
   SiPytorch,
   SiR,
   SiJupyter,
-  SiMicrosoftexcel,
+  SiNumpy,
+  SiLatex,
+  SiPandas
 } from "react-icons/si";
 
 function Techstack() {
@@ -39,16 +39,13 @@ function Techstack() {
         <DiReact />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiBootstrap />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
         <DiPython />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
+        <SiNumpy />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiPandas />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiTensorflow />
@@ -63,7 +60,13 @@ function Techstack() {
         <SiJupyter />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiMicrosoftexcel />
+        <DiJava />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <DiBootstrap />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiLatex />
       </Col>
     </Row>
   );

@@ -5,8 +5,15 @@ import {
   SiGooglecalendar,
   SiMacos,
   SiTodoist,
-  SiGooglecolab,  
+  SiGooglecolab,
+  SiMicrosoftoutlook,
+  SiMicrosoftteams,
+  SiRstudio,
+  SiOverleaf
 } from "react-icons/si";
+import { 
+  FaStackOverflow,
+ } from "react-icons/fa";
 
 function Toolstack() {
   return (
@@ -18,13 +25,28 @@ function Toolstack() {
         <SiVisualstudiocode />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <SiGooglecolab />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiRstudio />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <SiGooglecalendar />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiTodoist />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiGooglecolab />
+        <FaStackOverflow />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiOverleaf />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiMicrosoftoutlook />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiMicrosoftteams />
       </Col>
     </Row>
   );

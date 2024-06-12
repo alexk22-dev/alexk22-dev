@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { ImPointRight } from "react-icons/im";
+import { IoCodeWorkingSharp } from "react-icons/io5";
 
 function AboutCard() {
   return (
@@ -8,26 +8,27 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi! I'm <span className="purple"> Alexander Kim </span>
+            Hi! I'm <span className="purple"> Alexander Kim, </span>
             from <span className="purple"> Chicago, Illinois.</span>
             <br />
-            I am currently pursuing a cancer research internship at Northwestern Feinberg School of Medicine.
             <br />
-            I am also a Stamps Scholar at the University of Illinois Urbana-Champaign studying Chemistry and Molecular Cellular Biology!
-            Mesra.
+            I am currently pursuing a <strong className="purple">cancer research internship</strong> at <strong className="purple">Northwestern Feinberg School of Medicine.</strong>
+            <br />
+            <br />
+            I am also a Stamps Scholar at the <strong className="purple">University of Illinois Urbana-Champaign</strong> studying <strong className="purple">Chemistry</strong> and <strong className="purple">Molecular/Cellular Biology</strong>.
             <br />
             <br />
             Apart from studying the sciences, here are some other activities that I love to do!
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing the violin!
+              <IoCodeWorkingSharp /> Playing the violin!
             </li>
             <li className="about-activity">
-              <ImPointRight /> All things physical exercise (climbing, calisthenics, running)!
+              <IoCodeWorkingSharp /> All things physical exercise (climbing, calisthenics, running)!
             </li>
             <li className="about-activity">
-              <ImPointRight /> Serving my community!
+              <IoCodeWorkingSharp /> Serving my community!
             </li>
           </ul>
 

@@ -4,8 +4,6 @@ import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -27,23 +25,23 @@ function Home2() {
               classics to the groundbreaking, like
               <b className="purple">
                 {" "}
-                Java, Javascript's React and Python's Tensorflow and PyTorch.{" "}
+                Java, Javascript's React and Python's Tensorflow/PyTorch.{" "}
               </b>
               <br />
               <br />
               My field of interests include conducting research in{" "}
               <b className="purple">Cancer Biology and Oncology </b> and
-              studying methods to becoming a
-              <b className="purple">better, more humanistic physician.</b>
+              studying methods to becoming a {" "}
+              <b className="purple">more humanistic physician.</b>
               <br />
               <br />
               I'm also passionate in anything related to personal development,
               whether it be through the arts by playing the <b className="purple">
                 violin and piano
               </b>{" "}
-              or pushing myself physically through
+              or pushing myself physically through {" "}
               <b className="purple">
-                climbing, calistehnics, and running.
+                climbing, calisthenics, or running.
               </b>{" "}
             </p>
           </Col>
