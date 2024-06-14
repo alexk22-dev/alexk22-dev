@@ -56,8 +56,8 @@ function Projects() {
               isBlog={false}
               title="Romanza - A Violin Album"
               description="Original album featuring romantic violin works by Henryk Wieniawski, Ludwig van Beethoven, Antonín Dvořák, and Fritz Kreisler. All works are performed without accompaniment."
-              ghLink=""
-              demoLink="https://soundcloud.com/discover"
+              ghLink="https://www.merriam-webster.com/dictionary/work%20in%20progress"
+              demoLink="https://www.merriam-webster.com/dictionary/work%20in%20progress"
             />
           </Col> 
 
@@ -67,8 +67,8 @@ function Projects() {
               isBlog={false}
               title="Danzas - A Violin Album"
               description="Original album featuring Spanish dances for the violin by Pablo Sarasate. All works are performed without accompaniment."
-              ghLink=""
-              demoLink="https://soundcloud.com/discover"
+              ghLink="https://www.merriam-webster.com/dictionary/work%20in%20progress"
+              demoLink="https://www.merriam-webster.com/dictionary/work%20in%20progress"
             />
           </Col>
         </Row>
