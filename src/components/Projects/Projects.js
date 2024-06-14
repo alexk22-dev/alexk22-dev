@@ -6,7 +6,7 @@ import cdh1 from "../../Assets/Projects/cdh1.png";
 import salifort_motors from "../../Assets/Projects/salifort_motors.png";
 import cancer from "../../Assets/Projects/cancer.jpg";
 import romanza from "../../Assets/Projects/romanza.png"
-import danzas from "/Users/alexkim/Downloads/Portfolio-master/src/Assets/Projects/danzas.png"
+import danzas from "../../Assets/Projects/danzas.png"
 
 function Projects() {
   return (
