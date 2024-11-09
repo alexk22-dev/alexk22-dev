@@ -1,113 +1,36 @@
-import React, { useState } from "react";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
-import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
-import {
-  AiFillStar,
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-} from "react-icons/ai";
+// components/Navbar.js
+import React, { useState, useEffect } from 'react';
+import { NavLink } from './NavLink';
 
-import { CgFileDocument } from "react-icons/cg";
-
-function NavBar() {
-  const [expand, updateExpanded] = useState(false);
-  const [navColour, updateNavbar] = useState(false);
-
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
-    }
-  }
-
-  window.addEventListener("scroll", scrollHandler);
+const Navbar = ({ currentPage, setCurrentPage }) => {
+  // ... (existing state and useEffect logic)
 
   return (
-    <Navbar
-      expanded={expand}
-      fixed="top"
-      expand="md"
-      className={navColour ? "sticky" : "navbar"}
+    <nav
+      className={`fixed top-0 w-full transition-transform duration-300 bg-gray-800 z-50 ${
+        visible || isHovering ? 'translate-y-0' : '-translate-y-full'
+      }`}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
     >
-      <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
-        </Navbar.Brand>
-        <Navbar.Toggle
-          aria-controls="responsive-navbar-nav"
-          onClick={() => {
-            updateExpanded(expand ? false : "expanded");
-          }}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </Navbar.Toggle>
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto" defaultActiveKey="#home">
-            <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/about"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/project"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projects
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/resume"
-                onClick={() => updateExpanded(false)}
-              >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-              </Nav.Link>
-            </Nav.Item>
-
-
-            <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/alexk22-dev/alexk22-dev"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
-              </Button>
-            </Nav.Item>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      <div className="container mx-auto px-6 py-4">
+        <div className="flex justify-between items-center">
+          <button
+            onClick={() => setCurrentPage('home')}
+            className="text-2xl font-bold text-orange-500"
+          >
+            CodeRx
+          </button>
+          <div className="space-x-8">
+            <NavLink to="home" currentPage={currentPage} setCurrentPage={setCurrentPage}>Home</NavLink>
+            <NavLink to="mission" currentPage={currentPage} setCurrentPage={setCurrentPage}>Mission</NavLink>
+            <NavLink to="about" currentPage={currentPage} setCurrentPage={setCurrentPage}>About Us</NavLink>
+            <NavLink to="contact" currentPage={currentPage} setCurrentPage={setCurrentPage}>Contact</NavLink>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
-}
+};
 
-export default NavBar;
+export default Navbar;

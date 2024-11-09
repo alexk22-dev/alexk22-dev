@@ -1,0 +1,25 @@
+// ScrollTracker Component
+const ScrollTracker = () => {
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      setScrollPercentage(scrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div className="fixed right-0 top-0 w-2 h-full">
+      <div
+        className="h-full bg-gradient-to-b from-orange-500 to-gray-800"
+        style={{ transform: `scaleY(${scrollPercentage / 100})`, transformOrigin: 'top' }}
+      />
+    </div>
+  );
+};
