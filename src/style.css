@@ -23,7 +23,7 @@ button:focus {
 }
 
 /* --------- */
-/*  Preloader */
+/* Preloader */
 /* --------- */
 #preloader {
   position: fixed;
@@ -48,7 +48,7 @@ button:focus {
 }
 
 /* --------- */
-/*Scrollbar   */
+/* Scrollbar */
 /* --------- */
 
 ::-webkit-scrollbar {
@@ -270,6 +270,10 @@ button:focus {
   text-align: left;
 }
 
+#home-main-img{
+  border-radius: 25px;
+}
+
 .heading {
   font-size: 2.4em !important;
   padding-left: 50px !important;
@@ -285,13 +289,16 @@ button:focus {
 }
 
 .Typewriter__wrapper {
-  font-size: 2.2em !important;
-  color: #018ab7 !important;
+  font-size: 3.0em !important;
+  color: #74d6f7 !important;
   font-weight: 600 !important;
+  font-family: "JetBrains Mono", monospace;
+  font-style: normal;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: #00BFFF !important;
+
 }
 
 @media (max-width: 767px) {
@@ -315,6 +322,11 @@ button:focus {
     padding-top: 2em !important;
     padding-bottom: 2em !important;
   }
+}
+
+#my-img{
+  border-radius: 50%;
+  box-shadow: 0 4px 4px 5px rgba(72, 76, 144, 0.561) !important;
 }
 
 .home-about-section {
@@ -598,6 +610,11 @@ button:focus {
   .about-img {
     padding-top: 0 !important;
   }
+}
+
+#about-img {
+  border-radius: 50px !important;
+  border: 2.2px solid rgba(115, 190, 230, 0.883) !important;
 }
 /* --------- */
 /* Resume */
